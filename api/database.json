@@ -1,0 +1,154 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Broomhilda",
+      "email": "ridingbroomssince2003@yahoo.com",
+      "zipcode": 32541
+    },
+    {
+      "id": 2,
+      "username": "Starla",
+      "email": "startlingstarla@witchcoventry.com",
+      "zipcode": 32004
+    },
+    {
+      "id": 3,
+      "username": "Vikki",
+      "email": "vikkiwitchboss@witchywarren.com",
+      "zipcode": 33166
+    },
+    {
+      "username": "Trixi",
+      "email": "trixwitch@snitch.com",
+      "zipcode": 23452,
+      "id": 4
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 2,
+      "myUserId": 1
+    },
+    {
+      "myUserId": 3,
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "myUserId": 3,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "myUserId": 3,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "myUserId": 4,
+      "userId": 3,
+      "id": 5
+    }
+  ],
+  "posts": [
+    {
+      "post": "Hello!",
+      "originalTimeStamp": 1601472764045,
+      "editedTimeStamp": 0,
+      "userId": 4,
+      "id": 1
+    },
+    {
+      "post": "Hi!",
+      "originalTimeStamp": 1601473354443,
+      "editedTimeStamp": 0,
+      "userId": 3,
+      "id": 2
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "name": "get firewood",
+      "complete": false,
+      "dueDate": "2020-10-28",
+      "myUserId": 2
+    },
+    {
+      "id": 2,
+      "name": "pack crystals",
+      "complete": false,
+      "dueDate": "2020-10-29",
+      "myUserId": 1
+    },
+    {
+      "name": "Make magic",
+      "complete": false,
+      "dueDate": "2020-09-16",
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "name": "1245",
+      "complete": false,
+      "dueDate": "2020-09-08",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "name": "agdffgdg",
+      "complete": false,
+      "dueDate": "2020-09-23",
+      "userId": 4,
+      "id": 5
+    }
+  ],
+  "events": [
+    {
+      "name": "Great event!",
+      "date": "2020-09-15",
+      "time": "02:04",
+      "locationName": "The Place",
+      "zipcode": "1345314",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "name": "New Event",
+      "date": "2020-09-11",
+      "time": "00:19",
+      "locationName": "The Beach",
+      "zipcode": "123456",
+      "userId": 4,
+      "id": 2
+    }
+  ],
+  "news": [
+    {
+      "url": "https://www.google.com",
+      "title": "Magical Mystery Tour",
+      "synopsis": "Witches love tours and magic. Let's go to the beach!",
+      "currentTimeStamp": 1601301268913,
+      "myUserId": 2,
+      "id": 2
+    },
+    {
+      "url": "https://www.google.com",
+      "title": "Hello",
+      "synopsis": "News article",
+      "currentTimeStamp": 1601316520323,
+      "myUserId": 1,
+      "id": 4
+    },
+    {
+      "url": "Where's the HTTPS?",
+      "title": "Real News",
+      "synopsis": "Stuff",
+      "currentTimeStamp": 1601472830589,
+      "userId": 4,
+      "id": 8
+    }
+  ]
+}
