@@ -9,12 +9,31 @@ export const PublicPosts = () => {
         getPosts()
     }, [])
 
-    const checkDate = (post) => {
-        const originalTimeStamp = <span className="single__originalTimeStamp">posted at {new Date(post.originalTimeStamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} -</span>
-        const editedTimeStamp = <span className="single__editedTimeStamp">edited at {new Date(post.editedTimeStamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} -</span>
-        
-        return (post.editedTimeStamp === 0 ? {originalTimeStamp} : {originalTimeStamp}, {editedTimeStamp})
+    const CheckDate = (post) => {
+        console.log(post)
+        const OriginalTimeStamp = <span className="single__originalTimeStamp">posted at {new Date(post.post.originalTimeStamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} -</span>
+        const EditedTimeStamp = <span className="single__editedTimeStamp">edited at {new Date(post.post.editedTimeStamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} -</span>
+        console.log(post.post.editedTimeStamp)
+        return (post.post.editedTimeStamp === 0 ? [OriginalTimeStamp] : [OriginalTimeStamp], [EditedTimeStamp])
     }
+    
+
+    const ActiveUserPosts = ({post}) => (
+        <p className="post__single single__active">
+            <span className="single__username">{post.user.username}</span>
+            <CheckDate key={post.id} post={post}/>
+            <span className="single__post">{post.post}</span> <button type="button">✎</button>
+            <button type="button">✘</button>
+        </p>
+    )
+
+    const OtherUserPosts = ({post}) => (
+        <p className="post__single">
+            <span className="single__username">{post.user.username}</span>
+            <CheckDate key={post.id} post={post}/>            
+            <span className="single__post">{post.post}</span>
+        </p>
+    )
 
     return (
         <>
@@ -23,24 +42,14 @@ export const PublicPosts = () => {
                 {
                     posts.map(post => {
                         // To reduce repeated strings, store username in variable
-                        const username = <span key={post.user.id} className="single__username">{post.user.username}</span>
 console.log(post.post)
                         if (activeUser === post.userId) {
-                            return <p key={post.id} className="post__single single__active">
-                                {username}
-                                {checkDate(post)}
-                                <span className="single__post">{post.post}</span> <button type="button">✎</button>
-                                <button type="button">✘</button>
-                            </p>
+                            return <ActiveUserPosts key={post.id} post={post}/>
                             
                         } else {
-                            return <p key={post.id} className="post__single">
-                                {username}
-                                {checkDate(post)}
-                                <span className="single__post">{post.post}</span>
-                            </p>
+                            return <OtherUserPosts key={post.id} post={post}/>
                         }
-                    }).join("")
+                    })
                 }
             </div>
         </>
