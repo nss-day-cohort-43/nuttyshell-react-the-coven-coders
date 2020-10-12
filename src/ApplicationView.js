@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid } from 'semantic-ui-react'
 import './NutShell.css'
+import { HeaderWelcome } from "./components/header/HeaderWelcome"
 
 export const GridLayout = () => {
   
@@ -8,7 +9,7 @@ export const GridLayout = () => {
         <Grid divided='vertically'className="container">
             <Grid.Row columns={1} className="header">
                 <Grid.Column>
-                    HEADER
+                    <HeaderWelcome />
                 </Grid.Column>
             </Grid.Row>
 
