@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, GridColumn, GridRow } from 'semantic-ui-react'
+import { Grid, GridColumn } from 'semantic-ui-react'
 import './NutShell.css'
 import { HeaderWelcome } from "./components/header/HeaderWelcome"
 
@@ -10,7 +10,7 @@ export const GridLayout = () => {
         <Grid className="container">
             <Grid.Row rows={1}>
                 <GridColumn>
-                    <h1>HEADER</h1>
+                    <HeaderWelcome />
                 </GridColumn>
             </Grid.Row>
             <Grid.Row columns={3} className="row1">
