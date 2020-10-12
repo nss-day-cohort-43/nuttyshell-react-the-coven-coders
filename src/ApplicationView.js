@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, GridColumn, GridRow } from 'semantic-ui-react'
 import './NutShell.css'
 
+
 export const GridLayout = () => {
   
     return (
