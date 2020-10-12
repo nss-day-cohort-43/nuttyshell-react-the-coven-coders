@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, GridColumn, GridRow } from 'semantic-ui-react'
 import './NutShell.css'
+import { HeaderWelcome } from "./components/header/HeaderWelcome"
 
 
 export const GridLayout = () => {
