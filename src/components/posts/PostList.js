@@ -1,13 +1,13 @@
 // Similar to AnimalList 
-import React, { useContext, useEffect, useState } from 'react'
-import { PostContext } from './PostProvider'
+import React from 'react'
 import { Label, Menu, Tab } from 'semantic-ui-react'
+import { PublicPosts } from './PublicPosts'
 
 
 const panes = [
   {
     menuItem: { key: 'users', icon: 'users', content: 'Users' },
-    render: () => <Tab.Pane>Tab 1 Content</Tab.Pane>,
+    render: () => <Tab.Pane><PublicPosts/></Tab.Pane>,
   },
   {
     menuItem: (
