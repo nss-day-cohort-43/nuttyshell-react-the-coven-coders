@@ -6,6 +6,12 @@ export const GridLayout = () => {
   
     return (
         <Grid divided='vertically'className="container">
+            <Grid.Row columns={1} className="header">
+                <Grid.Column>
+                    HEADER
+                </Grid.Column>
+            </Grid.Row>
+
             <Grid.Row columns={3} className="row1">
             <Grid.Column className="row1-column1">
                 Chase fathom topgallant chandler tender cable take a caulk Spanish Main American Main scurvy.
