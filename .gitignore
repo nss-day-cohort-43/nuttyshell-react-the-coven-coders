@@ -26,4 +26,4 @@ yarn-error.log*
 Settings.js
 
 # database
-database.json
+/api
