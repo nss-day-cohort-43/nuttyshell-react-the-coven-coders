@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react"
 
 export const NewsContext = createContext()
 
-export const NewsProvider = () => {
+export const NewsProvider = (props) => {
     const [news, setNews] = useState([]) 
 
     const getNews = () => {
