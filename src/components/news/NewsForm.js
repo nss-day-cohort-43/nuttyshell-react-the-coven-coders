@@ -1,4 +1,5 @@
 import React, { useContext, useRef, useEffect } from "react"
+import { Form, Button } from 'semantic-ui-react'
 import { NewsContext } from "./NewsProvider"
 
 export const NewsForm = (props) => {
@@ -18,35 +19,35 @@ export const NewsForm = (props) => {
         }
     
     return (
-        <form className="newsForm">
+        <Form>
             <h2 className="newsForm__title">New Article</h2>
-            <fieldset>
+            <Form.Field>
                 <div className="form-group">
                     <label htmlFor="articleTitle">Article Title: </label>
                     <input type="text" id="articleTitle" ref={title} required autoFocus className="form-control" placeholder="Article title" />
                 </div>
-            </fieldset>
-            <fieldset>
+            </Form.Field>
+            <Form.Field>
                 <div className="form-group">
                     <label htmlFor="articleSynopsis">Synopsis: </label>
                     <input type="text" id="articleSynopsis" ref={synopsis} className="form-control" placeholder="Synopsis" />
                 </div>
-            </fieldset>
-            <fieldset>
+            </Form.Field>
+            <Form.Field>
                 <div className="form-group">
                     <label htmlFor="articleURL">URL: </label>
                     <input type="text" id="articleURL" ref={url} className="form-control" placeholder="URL" />
                 </div>
-            </fieldset>
+            </Form.Field>
             
-            <button type="submit"
+            <Button type="submit"
                 onClick={evt => {
                     evt.preventDefault() // Prevent browser from submitting the form
                     constructNewArticle()
                 }}
                 className="btn btn-primary">
                 Save Article
-            </button>
-        </form>
+            </Button>
+        </Form>
     )
 }

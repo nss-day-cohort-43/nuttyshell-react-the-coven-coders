@@ -5,8 +5,6 @@ import { PostList } from './components/posts/PostList'
 import { NewsList } from './components/news/NewsList'
 import { PostProvider } from './components/posts/PostProvider'
 import { NewsProvider } from './components/news/NewsProvider'
-import { PostProvider } from './components/posts/PostProvider'
-import { PostList } from './components/posts/PostList'
 import { UseLogo } from "./components/logo/UseLogo"
 import './NutShell.css'
 
@@ -43,9 +41,9 @@ export const GridLayout = () => {
                 </p>
             </Grid.Column>
             <Grid.Column className="row1-column3">
-                <p><NewsProvider>
+                <section><NewsProvider>
                     <NewsList />
-                </NewsProvider></p>
+                </NewsProvider></section>
             </Grid.Column>
             </Grid.Row>
     
