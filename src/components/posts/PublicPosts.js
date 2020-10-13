@@ -1,16 +1,13 @@
 import React, { useContext, useEffect } from 'react'
 import { PostContext } from './PostProvider'
-import { useParams } from 'react-router-dom'
 
 export const PublicPosts = () => {
-    const { posts, getPosts, getPostById, removePost } = useContext(PostContext)
+    const { posts, getPosts, removePost } = useContext(PostContext)
     const activeUser = +localStorage.getItem("activeUser")
 
-    const {postId} = useParams();
 
     useEffect(() => {
         getPosts()
-        .then(getPostById(postId))
 	}, [])
 
 
