@@ -6,7 +6,6 @@ import { EventProvider } from './components/events/EventProvider'
 import { EventList } from './components/events/EventList'
 import { PostList } from './components/posts/PostList'
 import { NewsList } from './components/news/NewsList'
-import { PostProvider } from './components/posts/PostProvider'
 import { NewsProvider } from './components/news/NewsProvider'
 import { UseLogo } from "./components/logo/UseLogo"
 import './NutShell.css'
