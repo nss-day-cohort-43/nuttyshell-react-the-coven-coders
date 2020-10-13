@@ -9,8 +9,8 @@ export const FriendsList = () => {
     }, [])
 
     return(
-        <>
+        <section className="container">
             <h2>Friends List</h2>
-        </>
+        </section>
     )
 }
