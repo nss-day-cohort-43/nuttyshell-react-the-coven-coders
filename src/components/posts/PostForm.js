@@ -21,13 +21,13 @@ export const PostForm = () => {
         <Form>
             <Form.Field>
             <Form.TextArea required className="new__textarea" key="newPost" label='Create New Post' value={enteredPost}
+            //This is a two way binding event 
             onChange={event => setEnteredPost(event.target.value)} placeholder='Say sumthin witchy' />
             <Form.Button className="new__btn-post" 
             onClick={
                 () => {
                     constructPostObj()
-                }}>        
-                    Submit</Form.Button>
+                }}>Submit</Form.Button>
             </Form.Field>
         </Form>
     )
