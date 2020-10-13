@@ -5,5 +5,6 @@ export const EventHTML = ({ event }) => (
         <div>Event: { event.name }</div>
         <div>Date: { event.date }, { event.time }</div>
         <div>Location: { event.locationName }</div>
+        <br/>
     </section>
 )
