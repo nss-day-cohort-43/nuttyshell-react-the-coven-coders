@@ -1,9 +1,8 @@
-// Similar to AnimalList 
 import React from 'react'
-import { Label, Menu, Tab } from 'semantic-ui-react'
+import { Menu, Tab } from 'semantic-ui-react'
 import { PublicPosts } from './PublicPosts'
 
-
+// This is the code for the tabs in the post section
 const panes = [
   {
     menuItem: { key: 'users', icon: 'users', content: 'Public' },
