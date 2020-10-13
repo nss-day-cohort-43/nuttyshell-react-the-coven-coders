@@ -9,12 +9,14 @@ export const PostForm = () => {
     const userId = +localStorage.getItem("activeUser")
 
     const constructPostObj = () => {
-        addPost({
-            post: enteredPost,
-            originalTimeStamp: Date.now(),
-            editedTimeStamp: 0,
-            userId
-        })
+        if (enteredPost !== "") {
+            addPost({
+                post: enteredPost,
+                originalTimeStamp: Date.now(),
+                editedTimeStamp: 0,
+                userId
+            })
+        }
     }
 
     return (
