@@ -1,13 +1,18 @@
 import React, { useContext, useEffect } from 'react'
 import { PostContext } from './PostProvider'
+import { useParams } from 'react-router-dom'
 
 export const PublicPosts = () => {
-    const { posts, getPosts } = useContext(PostContext)
+    const { posts, getPosts, getPostById, removePost } = useContext(PostContext)
     const activeUser = +localStorage.getItem("activeUser")
+
+    const {postId} = useParams();
 
     useEffect(() => {
         getPosts()
-    }, [])
+        .then(getPostById(postId))
+	}, [])
+
 
     const CheckDate = (props) => {
         const OriginalTimeStamp = <span className="single__originalTimeStamp">posted at {new Date(props.post.originalTimeStamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}  - </span>
@@ -21,7 +26,11 @@ export const PublicPosts = () => {
             <span className="single__username">{post.user.username}  -</span>
             <CheckDate key={post.id} post={post}/>
             <span className="single__post">{post.post}</span> <button type="button">✎</button>
-            <button type="button">✘</button>
+            <button onClick={
+				() => {
+					removePost(post.id)
+				}}>✘
+			</button>
         </p>
     )
 
