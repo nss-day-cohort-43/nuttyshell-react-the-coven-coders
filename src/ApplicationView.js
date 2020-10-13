@@ -1,11 +1,12 @@
 import React from 'react'
 import { Grid, GridColumn } from 'semantic-ui-react'
-import './NutShell.css'
 import { HeaderWelcome } from "./components/header/HeaderWelcome"
-import { PostList } from './components/posts/PostList'
 import { PostProvider } from './components/posts/PostProvider'
 import { EventProvider } from './components/events/EventProvider'
 import { EventList } from './components/events/EventList'
+import { PostList } from './components/posts/PostList'
+import { UseLogo } from "./components/logo/UseLogo"
+import './NutShell.css'
 
 
 export const GridLayout = () => {
@@ -14,6 +15,7 @@ export const GridLayout = () => {
         <Grid className="container">
             <Grid.Row rows={1}>
                 <GridColumn>
+                    <UseLogo />
                     <HeaderWelcome />
                 </GridColumn>
             </Grid.Row>
