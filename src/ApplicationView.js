@@ -35,9 +35,9 @@ export const GridLayout = () => {
                 </EventProvider>
             </Grid.Column>
             <Grid.Column className="row1-column3">
-                <section><NewsProvider>
+                <NewsProvider>
                     <NewsList />
-                </NewsProvider></section>
+                </NewsProvider>
             </Grid.Column>
             </Grid.Row>
     

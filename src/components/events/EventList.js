@@ -13,13 +13,13 @@ export const EventList = (props) => {
   }, []);
 
   return (
-    <>
+    <section className="container">
       <h2>Events</h2>
       <div className="events">
         {events.map((event) => {
           return <EventHTML key={event.id} event={event} />;
         })}
       </div>
-    </>
+    </section>
   );
 };

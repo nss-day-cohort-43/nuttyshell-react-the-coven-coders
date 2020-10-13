@@ -11,7 +11,7 @@ export const NewsList = (props) => {
   }, []);
 
   return (
-    <>
+    <section className="container">
       <h2>News</h2>
       <Button>
         <Icon name='add' />
@@ -21,6 +21,6 @@ export const NewsList = (props) => {
           return <NewsCard key={article.title} article={article} />;
         })}
       </div>
-    </>
+    </section>
   );
 };
