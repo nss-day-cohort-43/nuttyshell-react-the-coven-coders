@@ -27,7 +27,7 @@ export const GridLayout = () => {
                 Schooner heave to grog clipper barque Shiver me timbers gangplank Brethren of the Coast cog no prey, no pay. 
                 Lookout rope's end lanyard dance the hempen jig crow's nest parley Buccaneer Nelsons folly tack chase.
                 </p>
-            </Grid.Column >
+            </Grid.Column>
             <Grid.Column className="row1-column2">
                 <p>
                 Chase fathom topgallant chandler tender cable take a caulk Spanish Main American Main scurvy.
@@ -39,9 +39,9 @@ export const GridLayout = () => {
                 </p>
             </Grid.Column>
             <Grid.Column className="row1-column3">
-                <NewsProvider>
+                <p><NewsProvider>
                     <NewsList />
-                </NewsProvider>
+                </NewsProvider></p>
             </Grid.Column>
             </Grid.Row>
     

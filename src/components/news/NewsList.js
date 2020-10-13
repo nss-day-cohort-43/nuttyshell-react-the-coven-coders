@@ -13,6 +13,7 @@ export const NewsList = (props) => {
   return (
     <>
       <h2>News</h2>
+      <div id="addNews" title="Add New">+</div>
       <div className="news">
         {news.map((article) => {
           return <NewsCard key={article.title} article={article} />;
