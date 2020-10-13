@@ -7,7 +7,7 @@ export const PublicPosts = () => {
 
     useEffect(() => {
         getPosts()
-    }, [])
+    }, [posts])
 
     const CheckDate = (props) => {
         const OriginalTimeStamp = <span className="single__originalTimeStamp">posted at {new Date(props.post.originalTimeStamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}  - </span>

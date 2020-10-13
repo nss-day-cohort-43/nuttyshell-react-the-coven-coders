@@ -1,12 +1,13 @@
 import React from 'react'
 import { Menu, Tab } from 'semantic-ui-react'
 import { PublicPosts } from './PublicPosts'
+import { PostForm } from './PostForm'
 
 // This is the code for the tabs in the post section
 const panes = [
   {
     menuItem: { key: 'users', icon: 'users', content: 'Public' },
-    render: () => <Tab.Pane><PublicPosts/></Tab.Pane>,
+    render: () => <Tab.Pane><PublicPosts /><PostForm /></Tab.Pane>,
   },
   {
     menuItem: (
