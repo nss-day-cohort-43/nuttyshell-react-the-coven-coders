@@ -11,6 +11,7 @@ export const TaskList = (props) => {
 
     return (
         <div className="taskContainer">
+            <h2>Tasks</h2>
             {
                 task.map(task => {
                     return <TaskCard key={task.id} name={task.name} />
