@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from "react"
+import React, { useState, useContext } from "react"
 import { PostContext } from "./PostProvider"
 import { Form } from "semantic-ui-react"
 
@@ -10,7 +10,7 @@ export const PostForm = () => {
 
     const constructPostObj = () => {
         addPost({
-            post: post.current.value,
+            post: enteredPost,
             originalTimeStamp: Date.now(),
             editedTimeStamp: 0,
             userId
@@ -20,11 +20,14 @@ export const PostForm = () => {
     return (
         <Form>
             <Form.Field>
-            <Form.TextArea className="new__textarea" key="newPost" label='Create New Post' value='enteredPost' placeholder='Say sumthin witchy' />
-            <Form.Button className="new__btn-post" onClick={
-            (event) => {
-                constructPostObj()
-            }}>Submit</Form.Button>
+            <Form.TextArea required className="new__textarea" key="newPost" label='Create New Post' value={enteredPost}
+            onChange={event => setEnteredPost(event.target.value)} placeholder='Say sumthin witchy' />
+            <Form.Button className="new__btn-post" 
+            onClick={
+                () => {
+                    constructPostObj()
+                }}>        
+                    Submit</Form.Button>
             </Form.Field>
         </Form>
     )
