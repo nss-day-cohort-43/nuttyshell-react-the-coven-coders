@@ -9,18 +9,21 @@ export const PostForm = () => {
     const userId = +localStorage.getItem("activeUser")
 
     const constructPostObj = () => {
-        addPost({
-            post: enteredPost,
-            originalTimeStamp: Date.now(),
-            editedTimeStamp: 0,
-            userId
-        })
+        if (enteredPost !== "") {
+            addPost({
+                post: enteredPost,
+                originalTimeStamp: Date.now(),
+                editedTimeStamp: 0,
+                userId
+            })
+            setEnteredPost('')
+        }
     }
 
     return (
         <Form>
             <Form.Field>
-            <Form.TextArea required className="new__textarea" key="newPost" label='Create New Post' value={enteredPost}
+            <Form.TextArea className="new__textarea" key="newPost" label='Create New Post' value={enteredPost}
             //This is a two way binding event 
             onChange={event => setEnteredPost(event.target.value)} placeholder='Say sumthin witchy' />
             <Form.Button className="new__btn-post" 
