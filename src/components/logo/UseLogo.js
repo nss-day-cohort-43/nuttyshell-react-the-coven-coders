@@ -6,7 +6,7 @@ export const UseLogo = () => {
         <svg width="200" height="200" version="1.1" viewBox="0 0 52.917 52.917" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <filter id="filter1370" width="1.191" height="1.4308" style={{colorInterpolationFilters:"sRGB"}}>
-                    <feFlood flood-color="rgb(0,0,0)" flood-opacity=".49804" result="flood"/>
+                    <feFlood floodColor="rgb(0,0,0)" floodOpacity=".49804" result="flood"/>
                     <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
                     <feGaussianBlur in="composite1" result="blur"/>
                     <feOffset dx="-0.9" dy="1" result="offset"/>
