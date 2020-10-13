@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react"
 
-export const FriendsContext = createContext()
+export const FriendContext = createContext()
 
 export const FriendsProvider = props => {
     const [friends, setFriend] = useState([])
@@ -13,10 +13,10 @@ export const FriendsProvider = props => {
     }
 
     return (
-        <FriendsContext.Provider value={{
+        <FriendContext.Provider value={{
             friends, getFriends
         }}>
             {props.children}
-        </FriendsContext.Provider>
+        </FriendContext.Provider>
     )
 }
