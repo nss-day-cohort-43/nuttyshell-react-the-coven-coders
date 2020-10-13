@@ -22,6 +22,7 @@ export const PostProvider = (props) => {
             },
             body: JSON.stringify(postObj)
         })
+            .then(getPosts)
     }
 
     return (
