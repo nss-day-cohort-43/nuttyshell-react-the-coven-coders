@@ -1,0 +1,103 @@
+#star__1 {
+    fill: #fcff9a;
+    animation: star1;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes star1 {
+    0% {fill: #989a5e}
+    50% {fill: #fcff9a}
+    100% {fill: #989a5e}
+}
+
+#star__2 {
+    fill: #fcff9a;
+    animation: star2;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes star2 {
+    0% {fill: #989a5e}
+    50% {fill: #fcff9a}
+    100% {fill: #989a5e}
+}
+
+#star__3 {
+    fill: #fcff9a;
+    animation: star3;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes star3 {
+    0% {fill: #989a5e}
+    50% {fill: #fcff9a}
+    100% {fill: #989a5e}
+}
+
+#star__4 {
+    fill: #fcff9a;
+    animation: star4;
+    animation-duration:2.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes star4 {
+    0% {fill: #989a5e}
+    50% {fill: #fcff9a}
+    100% {fill: #989a5e}
+}
+
+#star__5 {
+    fill: #fcff9a;
+    animation: star5;
+    animation-duration:4.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes star5 {
+    0% {fill: #989a5e}
+    50% {fill: #fcff9a}
+    100% {fill: #989a5e}
+}
+
+#star__6 {
+    fill: #fcff9a;
+    animation: star6;
+    animation-duration:3.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes star6 {
+    0% {fill: #989a5e}
+    50% {fill: #fcff9a}
+    100% {fill: #989a5e}
+}
+
+#star__7 {
+    fill: #fcff9a;
+    animation: star7;
+    animation-duration:4.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes star7 {
+    0% {fill: #989a5e}
+    50% {fill: #fcff9a}
+    100% {fill: #989a5e}
+}
+
+#star__8 {
+    fill: #fcff9a;
+    animation: star8;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes star8 {
+    0% {fill: #989a5e}
+    50% {fill: #fcff9a}
+    100% {fill: #989a5e}
+}
