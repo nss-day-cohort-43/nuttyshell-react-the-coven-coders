@@ -5,6 +5,7 @@ export const FriendContext = createContext()
 
 export const FriendsProvider = props => {
     const [friends, setFriend] = useState([])
+    const activeUser = +localStorage.getItem("activeUser")
 
     const getFriends = activeUser => {
         const parsedActiveUser = +activeUser
@@ -13,9 +14,20 @@ export const FriendsProvider = props => {
         .then(setFriend)
     }
 
+    const addFriend = friendObj => {
+        fetch("http://localhost:8088/friends/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(friendObj)
+        })
+        .then(setFriend)
+    }
+
     return (
         <FriendContext.Provider value={{
-            friends, getFriends
+            friends, getFriends, addFriend
         }}>
             {props.children}
         </FriendContext.Provider>
