@@ -15,7 +15,7 @@ export const NewsForm = (props) => {
     const handleControlledInputChange = (event) => {
         const newStory = { ...news }
         newStory[event.target.name] = event.target.value
-        setEnteredNews(newStory)
+        setNews(newStory)
     }
 
     const constructNewArticle = () => {
@@ -53,10 +53,10 @@ export const NewsForm = (props) => {
             </Form.Field>
             
             <Button type="submit"
-                onClick={evt => {
-                    evt.preventDefault() // Prevent browser from submitting the form
-                    constructNewArticle()
-                }}
+                // onClick={evt => {
+                //     evt.preventDefault() // Prevent browser from submitting the form
+                //     constructNewArticle()
+                // }}
                 className="btn btn-primary">
                 Save Article
             </Button>
