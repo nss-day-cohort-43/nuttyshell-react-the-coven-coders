@@ -1,0 +1,8 @@
+/* Created by Sam Edwards */
+.friend__card {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 70%;
+    margin: 10px 0 10px;
+}

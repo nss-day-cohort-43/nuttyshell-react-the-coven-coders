@@ -7,6 +7,8 @@ import { TaskList } from './components/tasks/TaskList'
 import { EventProvider } from './components/events/EventProvider'
 import { EventList } from './components/events/EventList'
 import { PostList } from './components/posts/PostList'
+import { FriendsProvider } from './components/friends/FriendsProvider'
+import { FriendsList } from './components/friends/FriendsList'
 import { NewsList } from './components/news/NewsList'
 import { NewsProvider } from './components/news/NewsProvider'
 import { UseLogo } from "./components/logo/UseLogo"
@@ -48,14 +50,9 @@ export const GridLayout = () => {
                 </PostProvider>
             </Grid.Column>
             <Grid.Column className="row2-column2">
-                <p>
-                Chase fathom topgallant chandler tender cable take a caulk Spanish Main American Main scurvy.
-                Jack Tar jury mast chandler Privateer grog blossom sloop topmast parley doubloon fire ship. 
-                List driver lugsail interloper hornswaggle crow's nest pressgang lanyard jib squiffy.
-                Clipper black jack bowsprit grog blossom pink bilge water bilge rat Jack Tar fire in the hole bilged on her anchor. 
-                Schooner heave to grog clipper barque Shiver me timbers gangplank Brethren of the Coast cog no prey, no pay. 
-                Lookout rope's end lanyard dance the hempen jig crow's nest parley Buccaneer Nelsons folly tack chase.
-                </p>
+                <FriendsProvider>
+                    <FriendsList />
+                </FriendsProvider>
             </Grid.Column>
             </Grid.Row>
         </Grid>
