@@ -20,7 +20,7 @@ export const GridLayout = () => {
     return (
         <Grid className="container">
             <Grid.Row rows={1}>
-                <GridColumn>
+                <GridColumn className="header-container">
                     <UseLogo />
                     <HeaderWelcome />
                 </GridColumn>
@@ -42,7 +42,6 @@ export const GridLayout = () => {
                 </NewsProvider>
             </Grid.Column>
             </Grid.Row>
-    
             <Grid.Row columns={2} className="row2">
             <Grid.Column className="row2-column1">
                 <PostProvider>
@@ -58,4 +57,3 @@ export const GridLayout = () => {
         </Grid>
     )
 }
-

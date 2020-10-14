@@ -3,7 +3,7 @@ import "./logo.css"
 
 export const UseLogo = () => {
     return (
-        <svg width="200" height="200" version="1.1" viewBox="0 0 52.917 52.917" xmlns="http://www.w3.org/2000/svg">
+        <svg width="150" height="150" version="1.1" viewBox="0 0 52.917 52.917" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <filter id="filter1370" width="1.191" height="1.4308" style={{colorInterpolationFilters:"sRGB"}}>
                     <feFlood floodColor="rgb(0,0,0)" floodOpacity=".49804" result="flood"/>

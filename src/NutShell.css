@@ -1,4 +1,10 @@
-.row1-column1 p,
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .row1-column1 p,
 .row1-column2 p,
 .row1-column3 p{
     border: 3px solid black;
@@ -9,4 +15,4 @@
 .row2-column2 p{
     border: 3px solid black;
     padding: 10px;
-}
+} */
