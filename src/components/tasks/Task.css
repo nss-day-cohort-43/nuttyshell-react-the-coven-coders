@@ -1,0 +1,23 @@
+.taskContainer {
+    border: 3px solid black;
+  
+}
+.taskCheckbox{
+    display: flex;
+    margin: 5px;
+    width: 150px;
+}
+.taskInput {
+    margin-bottom: 10px;
+    
+}
+.addTask{
+   cursor: pointer;
+}
+
+.dateDue {
+    float: right;
+}
+.deleteTask, .editTask {
+    float: right;
+}
