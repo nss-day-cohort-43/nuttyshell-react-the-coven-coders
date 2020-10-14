@@ -12,7 +12,7 @@ export const FriendAdd = () => {
 // that way there is not querying for what's been rendered.
 // We're only dealing with the database's info.
 
-    const checkIfFriend = (enteredFriend) => {
+    const checkIfFriend = () => {
         // IF YOU ARE NOT ON MY FRIENDS LIST
         // PASS YOUR ID INTO THE CONSTRUCT FRIEND OBJ
         friends.find(friend => {
@@ -23,7 +23,7 @@ export const FriendAdd = () => {
     }
 
     const constructFriendObj = (userId) => {
-        if (enteredFriend !== "") {
+        {
             addFriend({
                 myUserId,
                 userId
@@ -43,7 +43,7 @@ export const FriendAdd = () => {
                 <Form.Button className="new__btn-post" 
                     onClick={
                         () => {
-                            checkIfFriend(enteredFriend)
+                            checkIfFriend()
                         }}>Add</Form.Button>
             </Form.Field>
         </Form>
