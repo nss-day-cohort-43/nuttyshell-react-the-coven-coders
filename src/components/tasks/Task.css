@@ -1,7 +1,3 @@
-.taskContainer {
-    border: 3px solid black;
-  
-}
 .taskCheckbox{
     display: flex;
     margin: 5px;

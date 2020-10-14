@@ -30,6 +30,17 @@ export const PostProvider = (props) => {
             .then(res => res.json())
     }
 
+    const editPost = post => {
+        return fetch(`http://localhost:8088/posts/${post.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(post)
+        })
+            .then(getPosts)
+    }
+
     const removePost = PostId => {
         return fetch(`http://localhost:8088/posts/${PostId}`, {
             method: "DELETE"
@@ -39,7 +50,7 @@ export const PostProvider = (props) => {
 
     return (
         <PostContext.Provider value={{
-            posts, getPosts, addPost, getPostById, removePost
+            posts, getPosts, addPost, getPostById, editPost, removePost
         }}>
             {props.children}
         </PostContext.Provider>
