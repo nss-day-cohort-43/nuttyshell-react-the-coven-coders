@@ -32,7 +32,7 @@ export const GridLayout = () => {
                 <TasksProvider>
                     <TaskList />
                 </TasksProvider>
-            </Grid.Column >
+            </Grid.Column>
             <Grid.Column className="row1-column2">
                 <EventProvider>
                     <EventList/>
