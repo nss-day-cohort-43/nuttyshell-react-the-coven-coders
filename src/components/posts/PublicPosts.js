@@ -1,33 +1,74 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { Button, Modal, Form, Header} from 'semantic-ui-react'
 import { PostContext } from './PostProvider'
+import { CheckDate } from './CheckDate'
 
 export const PublicPosts = () => {
-    const { posts, getPosts, removePost } = useContext(PostContext)
+    const { posts, getPosts, editPost, removePost } = useContext(PostContext)
     const activeUser = +localStorage.getItem("activeUser")
-
+    const [saved, setSaved] = useState(false);
+    const [modalOpened, setModalOpened] = useState(false);
+    const [post, setPost] = useState("")
 
     useEffect(() => {
         getPosts()
 	}, [])
+    
+    function handleSubmit(e) {
+        e.preventDefault();
+        setModalOpened(false)
+        setSaved(true);
+    }
 
 
-    const CheckDate = (props) => {
-        const OriginalTimeStamp = <span className="single__originalTimeStamp">posted at {new Date(props.post.originalTimeStamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}  - </span>
-        const EditedTimeStamp = <span className="single__editedTimeStamp">edited at {new Date(props.post.editedTimeStamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}  - </span>
-        return (props.post.editedTimeStamp === 0 ? [OriginalTimeStamp] : [OriginalTimeStamp, EditedTimeStamp])
+    const edit = () => {
+        editPost({
+            post,
+            originalTimeStamp: 1601388696301,
+            editedTimeStamp: Date.now(),
+            userId: 1
+          })
     }
     
+    const UpdatePost = (props) => {
+      return (
+        <Modal
+            open={modalOpened}
+            as={Form}
+            onSubmit={e => handleSubmit(e)}
+            size="tiny"
+            trigger={<button onClick={() => {
+                console.log(props)
+                setPost(props.post.post)
+               setModalOpened(true) 
+            }}
+            className="mini ui icon button"><i className="edit icon"></i></button>}>    
+        <Header icon="pencil" content="Edit Your Post" as="h2" />
+        <Modal.Content>
+          <Form.Input label="Post" required type="text" placeholder="Your post goes here" value={post} onChange={event => setPost(event.target.value)}/>
+          {saved ? <div>Saved!</div> : null}
+        </Modal.Content>
+        <Modal.Actions>
+          <Button type="submit" color="red" icon="times" content="Close" onClick={() => setModalOpened(false)}/>
+          <Button type="submit" color="green" icon="save" content="Save" 
+          onClick={edit}/>
+        </Modal.Actions>
+      </Modal>
+      )
+    }
 
     const ActiveUserPosts = ({post}) => (
         <p className="post__single single__active">
             <span className="single__username">{post.user.username}  -</span>
             <CheckDate key={post.id} post={post}/>
-            <span className="single__post">{post.post}</span> <button type="button">✎</button>
-            <button onClick={
+            <span className="single__post">{post.post}</span> 
+            <UpdatePost key={post.id} post={post}/>
+            <button className="mini ui icon button" onClick={
 				() => {
 					removePost(post.id)
-				}}>✘
-			</button>
+				}}>
+                    <i className="trash icon"></i>
+            </button>
         </p>
     )
 
