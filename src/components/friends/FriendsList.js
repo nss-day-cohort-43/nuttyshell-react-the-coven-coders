@@ -1,6 +1,8 @@
+// Created by Sam Edwards
 import React, { useContext, useEffect }from "react"
 import { FriendContext } from "./FriendsProvider"
 import { FriendCard } from "./FriendCard"
+import "./friends.css"
 
 export const FriendsList = () => {
     const { friends, getFriends } = useContext(FriendContext)

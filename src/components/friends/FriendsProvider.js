@@ -1,3 +1,4 @@
+// Created by Sam Edwards
 import React, { useState, createContext } from "react"
 
 export const FriendContext = createContext()
