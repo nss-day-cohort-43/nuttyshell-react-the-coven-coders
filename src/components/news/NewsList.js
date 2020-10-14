@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { NewsContext } from "./NewsProvider";
 import { NewsCard } from "./NewsCard";
 import { Button, Icon } from 'semantic-ui-react'

@@ -15,7 +15,7 @@ export const NewsForm = (props) => {
     const handleControlledInputChange = (event) => {
         const newStory = { ...news }
         newStory[event.target.name] = event.target.value
-        setNews(newStory)
+        setEnteredNews(newStory)
     }
 
     const constructNewArticle = () => {
@@ -32,7 +32,7 @@ export const NewsForm = (props) => {
     
     return (
         <Form>
-            <h2 className="newsForm__title">New Article</h2>
+            <h4 className="newsForm__title">New Article</h4>
             <Form.Field value={enteredNews}>
                 <div className="form-group">
                     <label htmlFor="articleTitle">Article Title: </label>
