@@ -2,6 +2,7 @@
 import React, { useContext, useEffect }from "react"
 import { FriendContext } from "./FriendsProvider"
 import { FriendCard } from "./FriendCard"
+import { FriendAdd } from "./FriendAdd"
 import "./friends.css"
 
 export const FriendsList = () => {
@@ -15,6 +16,7 @@ export const FriendsList = () => {
     return (
         <section className="container">
             <h2>Friends List</h2>
+            <FriendAdd />
             {
                 friends.map(friend => {
                     // had to drill super deep for props to get username
