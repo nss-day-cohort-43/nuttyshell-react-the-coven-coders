@@ -25,10 +25,10 @@ export const GridLayout = () => {
             </Grid.Row>
             <Grid.Row columns={3} className="row1">
             <Grid.Column className="row1-column1">
-                <TasksProvider>
+                {/* <TasksProvider>
                     <TaskList />
-                </TasksProvider>
-            </Grid.Column >
+                </TasksProvider> */}
+            </Grid.Column>
             <Grid.Column className="row1-column2">
                 <EventProvider>
                     <EventList/>

@@ -5,7 +5,9 @@ import { Button, Icon } from 'semantic-ui-react'
 
 export const NewsList = (props) => {
   const { news, getNews } = useContext(NewsContext);
-    
+
+  const activeUser = parseInt(localStorage.getItem("activeUser"));
+
   useEffect(() => {
     getNews();
   }, []);
@@ -14,11 +16,13 @@ export const NewsList = (props) => {
     <section className="container">
       <h2>News</h2>
       <Button>
-        <Icon name='add' />
-    </Button>
+        <Icon name='add'/>
+      </Button>
       <div className="news">
         {news.map((article) => {
-          return <NewsCard key={article.title} article={article} />;
+            if (article.userId === activeUser) {
+                return <NewsCard key={article.id} article={article} />;
+            }
         })}
       </div>
     </section>
