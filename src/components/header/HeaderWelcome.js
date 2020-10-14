@@ -13,7 +13,7 @@ export const HeaderWelcome = () => {
 
     return (
     <>
-        <p>Witchy Salutations, {username}!</p>
+        <h2>Witchy Salutations, {username}!</h2>
         <button onClick={clearStorage}>
             Log Out
         </button>
