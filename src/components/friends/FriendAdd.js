@@ -1,3 +1,4 @@
+// Created by Sam Edwards
 import React, { useState, useContext } from "react"
 import { Form } from "semantic-ui-react"
 import { FriendContext } from "./FriendsProvider"
@@ -7,16 +8,11 @@ export const FriendAdd = () => {
     const [enteredFriend, setEnteredFriend] = useState('')
     const myUserId = +localStorage.getItem("activeUser")
 
-// We are gonna use get friends
-// BY ID, so we can get an array of that users friends.
-// that way there is not querying for what's been rendered.
-// We're only dealing with the database's info.
-
     const checkIfFriend = () => {
         // IF YOU ARE NOT ON MY FRIENDS LIST
         // PASS YOUR ID INTO THE CONSTRUCT FRIEND OBJ
         friends.find(friend => {
-            console.log(friend)
+            // console.log(friend)
            if (friend !== enteredFriend) {
             //    console.log("YOUR NOT ON MY FRIENDS LIST")
            }
