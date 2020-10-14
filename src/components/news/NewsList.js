@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NewsContext } from "./NewsProvider";
 import { NewsCard } from "./NewsCard";
 import { Button, Icon } from 'semantic-ui-react'
@@ -15,10 +15,10 @@ export const NewsList = (props) => {
 
   return (
     <section className="container">
-      <h2>News<Button size='mini' floated='right' onClick={() => <NewsForm />}>
+      <h2>News<Button size='mini' floated='right'>
         <Icon fitted name='add'/>
       </Button></h2>
-      
+      <NewsForm />
       <div className="news">
         {news.map((article) => {
             if (article.userId === activeUser) {
