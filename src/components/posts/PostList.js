@@ -15,12 +15,7 @@ const panes = [
         Secret Messages
       </Menu.Item>
     ),
-    render: () => <Tab.Pane>Chase fathom topgallant chandler tender cable take a caulk Spanish Main American Main scurvy.
-    Jack Tar jury mast chandler Privateer grog blossom sloop topmast parley doubloon fire ship. 
-    List driver lugsail interloper hornswaggle crow's nest pressgang lanyard jib squiffy.
-    Clipper black jack bowsprit grog blossom pink bilge water bilge rat Jack Tar fire in the hole bilged on her anchor. 
-    Schooner heave to grog clipper barque Shiver me timbers gangplank Brethren of the Coast cog no prey, no pay. 
-    Lookout rope's end lanyard dance the hempen jig crow's nest parley Buccaneer Nelsons folly tack chase.</Tab.Pane>,
+    render: () => <Tab.Pane><h2>Private Messages</h2><p>Soon you will be able to chat privately with a member of your coven!</p></Tab.Pane>,
   },
 ]
 
