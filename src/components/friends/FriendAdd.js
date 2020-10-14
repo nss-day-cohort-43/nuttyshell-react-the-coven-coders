@@ -16,8 +16,9 @@ export const FriendAdd = () => {
         // IF YOU ARE NOT ON MY FRIENDS LIST
         // PASS YOUR ID INTO THE CONSTRUCT FRIEND OBJ
         friends.find(friend => {
+            console.log(friend)
            if (friend !== enteredFriend) {
-               console.log("YOUR NOT ON MY FRIENDS LIST")
+            //    console.log("YOUR NOT ON MY FRIENDS LIST")
            }
         })
     }
