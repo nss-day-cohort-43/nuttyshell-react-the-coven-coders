@@ -53,7 +53,7 @@
 #star__5 {
     fill: #fcff9a;
     animation: star5;
-    animation-duration:.5s;
+    animation-duration:2.5s;
     animation-iteration-count: infinite;
 }
 
